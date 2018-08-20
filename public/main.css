@@ -148,9 +148,22 @@ table {
 #app {
   width: 100%;
   height: 100vh;
+  background: linear-gradient(90deg, #0c0c0c 0%, #1b1b1b 100%);
 }
-img {
+.scanned-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
+}
+.inactive-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.inactive-screen img {
+  max-width: 400px;
 }

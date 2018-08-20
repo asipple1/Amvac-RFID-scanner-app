@@ -11,7 +11,12 @@
 <body>
   <h1 id="tag"></h1>
   <div id="app">
-    <img v-bind:src="currentImage" />
+    <div v-if="currentImage" class="scanned-image">
+        <img v-bind:src="currentImage" />
+    </div>
+    <div v-else class="inactive-screen">
+      <img src="/images/simpas-logo.png" alt="simpas logo">
+    </div>
   </div>
   <script src="/main.js"></script>
 </html>

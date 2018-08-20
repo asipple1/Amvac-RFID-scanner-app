@@ -4,7 +4,7 @@ const http = require('http').Server(app);
 const io = require('socket.io')(http);
 const SerialPort = require('serialport');
 const Readline = SerialPort.parsers.Readline;
-const port = new SerialPort('/dev/tty.usbserial-AH06VY13');
+const port = new SerialPort('/dev/tty.usbserial-A506LPV4');
 const parser = new Readline();
 port.pipe(parser);
 
