@@ -10,6 +10,7 @@ var app = new Vue({
       return {
         currentTag: null,
         currentImage: null,
+        timeOut: null,
         tags: [
           {
             "id": "07004B7AE7D1",
@@ -91,8 +92,11 @@ var app = new Vue({
       for (let item of this.tags) {
         if (item.id === this.currentTag) {
           this.currentImage = item.image;
-          var self = this;
-          setTimeout(function () { self.currentImage = null; self.currentTag = null; } , 10000)
+          let self = this;
+          if (this.timeOut) {
+            clearTimeout(this.timeOut);
+          }
+          this.timeOut = setTimeout(function () { self.currentImage = null; self.currentTag = null; } , 10000)
         }
       }
     }
