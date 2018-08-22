@@ -146,9 +146,16 @@ table {
 }
 
 #app {
+  position: relative;
   width: 100%;
   height: 100vh;
   background: linear-gradient(90deg, #0c0c0c 0%, #1b1b1b 100%);
+}
+.scanned-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10000;
 }
 .scanned-image img {
   width: 100%;
@@ -164,6 +171,17 @@ table {
   justify-content: center;
   align-items: center;
 }
-.inactive-screen img {
+/* .inactive-screen img {
   max-width: 400px;
+} */
+
+/* Slider */
+.swiper-container {
+  width: 100%;
+  height: 100vh;
+}
+.swiper-container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }

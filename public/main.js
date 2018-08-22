@@ -80,6 +80,9 @@ var app = new Vue({
         ]
       }
     },
+    mounted() {
+      this.carousel();
+    },
     watch: {
     currentTag: function (val) {
       if (val) {
@@ -96,9 +99,22 @@ var app = new Vue({
           if (this.timeOut) {
             clearTimeout(this.timeOut);
           }
-          this.timeOut = setTimeout(function () { self.currentImage = null; self.currentTag = null; } , 10000)
+          this.timeOut = setTimeout(function () { 
+            self.currentImage = null; 
+            self.currentTag = null; 
+          } , 20000)
         }
       }
+    },
+    carousel: function() {
+      new Swiper('.swiper-container', {
+        loop: true,
+        slidesPerView: 1,
+        grabCursor: true,
+        keyboard: {
+          enabled: true,
+        },
+      });
     }
   }
  });

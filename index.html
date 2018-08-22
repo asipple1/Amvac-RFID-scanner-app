@@ -3,9 +3,11 @@
 
 <head>
   <title>Amvac Scanner Station One</title>
+  <link rel="stylesheet" href="/swiper.css">
   <link rel="stylesheet" href="/main.css">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+  <script src="/vue.js"></script>
   <script src="/socket.io.js"></script>
+  <script src="/swiper.js"></script>
 </head>
 
 <body>
@@ -14,8 +16,16 @@
     <div v-if="currentImage" class="scanned-image">
         <img v-bind:src="currentImage" />
     </div>
-    <div v-else class="inactive-screen">
-      <img src="/images/simpas-logo.png" alt="simpas logo">
+    <div class="inactive-screen">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="https://images.pexels.com/photos/545968/pexels-photo-545968.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt=""></div>
+          <div class="swiper-slide"><img src="https://images.pexels.com/photos/674577/pexels-photo-674577.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            alt=""></div>
+          <div class="swiper-slide"><img src="https://images.pexels.com/photos/375894/pexels-photo-375894.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            alt=""></div>
+        </div>
+      </div>
     </div>
   </div>
   <script src="/main.js"></script>
